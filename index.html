@@ -1,0 +1,54 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>E2E Testing Wizard Mock</title>
+        <link href="/style.css" rel="stylesheet">
+    </head>
+    <body hx-boost="true">
+        <header>
+            <h1 class="heading" data-testid="header">E2E Testing Wizard Mock</h1>
+        </header>
+        <main class="box">
+            <form id="mockForm" class="container" method="GET" action="/summary-page">
+                <h2 class="heading" data-testid="form-header">Mock Form</h2>
+                <div class="form-content">
+                    <div class="form-row">
+                        <label for="companyName">Framework Name</label>
+                        <input class="input" type="text" id="frameworkName" name="frameworkName" data-testid="framework-name" value="" placeholder="R2E testing..." spellcheck="false">
+                    </div>
+                    <label for="testCount">How many tests?</label>
+                    <div class="form-row">
+                        <input class="input no-scroll-buttons" type="number" id="testCount" value="" name="testCount" placeholder="999">
+                        <div id="testCountError" data-testid="testCountError" class="form-error hidden"></div>
+                    </div>
+                    <label for="isProduction">Is this production?</label>
+                    <input class="checkbox" type="checkbox" id="isProduction" data-testid="isProduction" name="isProduction">
+                    <div class="form-row">
+                        <span for="technology">Technology</span>
+                        <fieldset class="radio-group">
+                            <label for="technology-r2e">
+                                <input class="radio" type="radio" id="technology-r2e" name="technology" value="r2e" checked>
+                                R2E
+                            </label>
+                            <label for="technology-selenium">
+                                <input class="radio" type="radio" id="technology-selenium" name="technology" value="selenium">
+                                Selenium
+                            </label>
+                            <label for="technology-puppeteer">
+                                <input class="radio" type="radio" id="technology-puppeteer" name="technology" value="puppeteer">
+                                Puppeteer
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="actions">
+                    <div></div>
+                    <button id="submit-button" type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+        </main>
+    
+        <script src="/mockForm.js"></script>
+    </body>
+</html>
