@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>E2E Testing Waiting</title>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body hx-boost="true">
+        <header>
+            <h1 class="heading" data-testid="header">Wait for elements</h1>
+        </header>
+        <main class="box">
+            <div class="container">
+                <h2 class="heading" data-testid="form-header">Mock Form</h2>
+                <div class="actions">
+                    <button id="show-opacity" type="button" class="btn">Show via opacity</button>
+                    <button id="show-display" type="button" class="btn">Show via display</button>
+                </div>
+                <div class="hide-by-opacity">Hidden by opacity...</div>
+                <div class="hide-by-display">Hidden by display...</div>
+            </div>
+        </main>
+        <style>
+            .hide-by-opacity {
+              opacity: 0;
+            } 
+            .hide-by-display {
+              display: none;
+            }
+        </style>
+    
+        <script>
+            document.querySelector("#show-opacity").addEventListener("click", _evt => {
+                setTimeout(() => {
+                    document.querySelector(".hide-by-opacity").classList.remove("hide-by-opacity")
+                }, 1000)
+            })
+            document.querySelector("#show-display").addEventListener("click", _evt => {
+                setTimeout(() => {
+                    document.querySelector(".hide-by-display").classList.remove("hide-by-display")
+                }, 1000)
+            })
+        </script>
+    </body>
+</html>
