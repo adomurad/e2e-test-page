@@ -1,0 +1,20 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>E2E Testing - iFrame Page</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body hx-boost="true">
+    <header>
+      <h1 class="heading" data-testid="header">IFrame Page</h1>
+    </header>
+    <main class="box">
+      <div class="container">
+        <h2 class="heading">Outside Frame!</h2>
+        <span id="span-outside-frame"> Outside frame </span>
+        <iframe src="inside-frame" frameborder="4"></iframe>
+      </div>
+    </main>
+  </body>
+</html>
